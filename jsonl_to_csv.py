@@ -7,16 +7,16 @@ import jsonlines
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--input_jsonl", 
+        "-i", "--input_jsonl", 
         type=Path,
         help="Path to the jsonl file.",
-        default="./data/train.jsonl"
+        required=True
         )
     parser.add_argument(
-        "--output_csv", 
+        "-o", "--output_csv", 
         type=Path,
         help="Path to the csv file.",
-        default="./input.csv"
+        required=True
         )
     args = parser.parse_args()
     assert os.path.splitext(args.input_jsonl)[-1] == ".jsonl"
