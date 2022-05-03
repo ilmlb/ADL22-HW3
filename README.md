@@ -6,7 +6,11 @@ Dataset & evaluation script for ADL 2022 homework 3
 
 ## Installation
 ```
+<<<<<<< HEAD
 git clone https://github.com/ilmlb/ADL22-HW3.git
+=======
+git clone https://github.com/moooooser999/ADL22-HW3.git
+>>>>>>> 9127bd19949810c2b21bafe752ffb087bb504db7
 cd ADL22-HW3
 pip install -e tw_rouge
 ```
