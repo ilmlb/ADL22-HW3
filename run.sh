@@ -1,0 +1,1 @@
+python3 predict.py --greedy --beam 5 --top_k 10 --top_p 0.3 --temperature 0.3 -a "${1}" -s "${2}" -m ./ckpt/
