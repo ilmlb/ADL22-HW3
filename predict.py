@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     with jsonlines.open(args.summary, "w") as writer:
         for article, id in tqdm(test_loader):
-            input_ids = tokenizer.encode(article[0], return_tensors='pt').to(device)
+            input_ids = tokenizer.encode(article[0], truncation=True, max_length=512, return_tensors='pt').to(device)
             
             output = model.generate(input_ids, max_length=args.max_length, do_sample=sample, num_beams=args.beam, temperature=args.temperature, top_k=args.top_k, top_p=args.top_p)
             writer.write({
